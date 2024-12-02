@@ -1,0 +1,550 @@
+ERROR - 2024-12-01 00:04:39 --> mysqli_sql_exception: Table 'touristagency.user' doesn't exist in C:\xampp\htdocs\BestTravelAgency\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\BestTravelAgency\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\BestTravelAgency\system\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\BestTravelAgency\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\BestTravelAgency\app\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(933): App\Controllers\AuthController->login()
+#8 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+#9 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\BestTravelAgency\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\BestTravelAgency\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\BestTravelAgency\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-12-01 00:04:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'touristagency.user' doesn't exist
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `login` = :login:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 00:04:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'touristagency.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `login` = \'admin_user\'
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `login` = \'admin_user\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `login` = :login:
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 00:04:39 --> [Caused by] mysqli_sql_exception: Table 'touristagency.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `user`
+WHERE `login` = \'admin_user\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `login` = \'admin_user\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `login` = \'admin_user\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `login` = :login:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\AuthController.php(16): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->login()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 00:08:39 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: GET, Route: tours]
+in SYSTEMPATH\Filters\Filters.php on line 197.
+ 1 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('tours', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 00:08:57 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: GET, Route: tours]
+in SYSTEMPATH\Filters\Filters.php on line 197.
+ 1 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('tours', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 00:09:40 --> Error: Class "App\Filters\AuthFilter" not found
+[Method: GET, Route: tours]
+in SYSTEMPATH\Filters\Filters.php on line 197.
+ 1 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 2 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('tours', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:02:53 --> ParseError: Unclosed '{' on line 17
+[Method: GET, Route: /]
+in APPPATH\Config\Routes.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\RouteCollection->loadRoutes()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(null)
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:09:58 --> Error: Class "App\Models\CountryModel" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\AdminController.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:10:07 --> Error: Class "App\Models\CountryModel" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\AdminController.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:12:46 --> Error: Class "App\Models\CountryModel" not found
+[Method: GET, Route: admin]
+in APPPATH\Controllers\AdminController.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:38:56 --> ErrorException: Undefined variable $images
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 202.
+ 1 APPPATH\Views\admin\index.php(202): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $images', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 202)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(23): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:42:41 --> BadMethodCallException: Call to undefined method App\Models\ImageModel::getImagesWithHotels
+[Method: GET, Route: admin]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\AdminController.php(24): CodeIgniter\Model->__call('getImagesWithHotels', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:45:26 --> ErrorException: Undefined variable $images
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $images', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(26): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:46:30 --> ErrorException: Undefined variable $images
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $images', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(26): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 15:46:42 --> ErrorException: Undefined variable $images
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $images', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(26): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 17:38:49 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "<filename"
+[Method: GET, Route: writable/uploads/images/%3Cfilename]
+in SYSTEMPATH\Router\Router.php on line 737.
+ 1 SYSTEMPATH\Router\Router.php(204): CodeIgniter\Router\Router->checkDisallowedChars('writable/uploads/images/<filename')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('writable/uploads/images/<filename')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 19:38:18 --> ErrorException: Undefined variable $comments
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 245.
+ 1 APPPATH\Views\admin\index.php(245): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comments', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 245)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(27): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 19:41:34 --> ErrorException: Undefined variable $comments
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comments', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(27): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 19:41:36 --> ErrorException: Undefined variable $comments
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comments', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(27): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 19:42:18 --> ErrorException: Undefined variable $comments
+[Method: GET, Route: admin]
+in APPPATH\Views\admin\index.php on line 193.
+ 1 APPPATH\Views\admin\index.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $comments', 'C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php', 193)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\BestTravelAgency\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\AdminController.php(27): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AdminController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-01 20:14:04 --> mysqli_sql_exception: Column 'user' cannot be null in C:\xampp\htdocs\BestTravelAgency\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\BestTravelAgency\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\BestTravelAgency\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\BestTravelAgency\app\Controllers\CommentsController.php(32): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(933): App\Controllers\CommentsController->addComment()
+#6 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+#7 C:\xampp\htdocs\BestTravelAgency\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\BestTravelAgency\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\BestTravelAgency\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\BestTravelAgency\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-12-01 20:14:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'user' cannot be null
+[Method: POST, Route: comments/add]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (:hotel_id:, :user:, :comment:, :created_at:)', [...], false)
+ 2 APPPATH\Controllers\CommentsController.php(32): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CommentsController->addComment()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 20:14:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'user' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (\'4\', NULL, \'довольно хорошо\', \'2024-12-01 20:14:04\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (\'4\', NULL, \'довольно хорошо\', \'2024-12-01 20:14:04\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (:hotel_id:, :user:, :comment:, :created_at:)', [...], false)
+ 4 APPPATH\Controllers\CommentsController.php(32): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CommentsController->addComment()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 20:14:05 --> [Caused by] mysqli_sql_exception: Column 'user' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (\'4\', NULL, \'довольно хорошо\', \'2024-12-01 20:14:04\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (\'4\', NULL, \'довольно хорошо\', \'2024-12-01 20:14:04\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (\'4\', NULL, \'довольно хорошо\', \'2024-12-01 20:14:04\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `comments` (`hotel_id`, `user`, `comment`, `created_at`) VALUES (:hotel_id:, :user:, :comment:, :created_at:)', [...], false)
+ 5 APPPATH\Controllers\CommentsController.php(32): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CommentsController->addComment()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 20:36:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "comments.php"
+[Method: GET, Route: comments]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('comments.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('comments', [], true)
+ 3 APPPATH\Controllers\CommentsController.php(18): view('comments', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CommentsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-01 20:50:50 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+CRITICAL - 2024-12-01 20:50:50 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "errors/html/error_500.php"
+[Method: GET, Route: comments]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('errors/html/error_500.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('errors/html/error_500', [], true)
+ 3 APPPATH\Controllers\CommentsController.php(24): view('errors/html/error_500')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\CommentsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CommentsController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-01 20:56:57 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:58:59 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:01 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:02 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:05 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:07 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:09 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:11 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:13 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:15 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:17 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:19 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:21 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:23 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:25 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:27 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:29 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:31 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 20:59:55 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 21:00:07 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 21:00:19 --> [ERROR] Undefined variable $hotels APPPATH\Views\comments\index.php:53
+ERROR - 2024-12-01 22:12:11 --> Попытка добавления комментария неавторизованным пользователем.
+ERROR - 2024-12-01 22:17:08 --> Попытка добавления комментария неавторизованным пользователем.
+ERROR - 2024-12-01 22:29:33 --> Попытка добавления комментария неавторизованным пользователем.
+ERROR - 2024-12-01 22:36:31 --> Попытка добавления комментария неавторизованным пользователем.
+ERROR - 2024-12-01 22:45:11 --> Неудачная попытка логина: admin_user
+ERROR - 2024-12-01 22:45:36 --> Неудачная попытка логина: admin_user
+ERROR - 2024-12-01 22:46:27 --> Попытка добавления комментария неавторизованным пользователем.
+CRITICAL - 2024-12-01 23:02:40 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/10]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('10')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:04:00 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/10]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('10')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:04:15 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/4]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:04:26 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/4]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:04:27 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/4]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:07:38 --> Error: Class "App\Models\HotelModel" not found
+[Method: GET, Route: hotel/4]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('4')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:08:14 --> Error: Class "App\Models\HotelModel" not found
+[Method: GET, Route: hotel/1]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:08:22 --> Error: Class "App\Models\HotelModel" not found
+[Method: GET, Route: hotel/1]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:08:34 --> Error: Class "App\Models\HotelModel" not found
+[Method: GET, Route: hotel/1]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('1')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:10:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "hotel_details.php"
+[Method: GET, Route: hotel/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hotel_details.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('hotel_details', [], true)
+ 3 APPPATH\Controllers\HotelController.php(31): view('hotel_details', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:10:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "hotel_details.php"
+[Method: GET, Route: hotel/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hotel_details.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('hotel_details', [], true)
+ 3 APPPATH\Controllers\HotelController.php(31): view('hotel_details', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('1')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:38:43 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:39:21 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:39:24 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:39:56 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:40:17 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:40:22 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-12-01 23:40:59 --> Error: Class "App\Controllers\HotelModel" not found
+[Method: GET, Route: hotel/2]
+in APPPATH\Controllers\HotelController.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelController->details('2')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-12-01 23:48:44 --> Неудачная попытка логина: admin_user
+ERROR - 2024-12-01 23:49:01 --> Неудачная попытка логина: admin_user
